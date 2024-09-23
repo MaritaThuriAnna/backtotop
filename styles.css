@@ -3,10 +3,44 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-  grid-template-columns: auto 0px; 
+    grid-template-columns: auto 0px;
 }
 
 .content {
     padding: 20px;
 }
 
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.top {
+    /* setez valoare fixă de decalaj față de partea de sus a paginii */
+    --offset: 50px;
+
+    /* ramane fixat la o pozitie data cand este derulat pana la acea pozitie  */
+    position: sticky;
+    bottom: 20px;
+    margin-right: 10px;
+    /* aseaza elementul la finalul grid-ului */
+    place-self: end;
+
+    /* calculeaza o margine superioara care incepe dupa inaltimea vizibila a paginii (100vh)
+       si adauga decalajul definit de variabila --offset
+       asigura ca butonul apare doar când se derulează o anumită parte a paginii */
+    margin-top: calc(100vh + var(--offset));
+
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #000000;
+    background: #d68f8f;
+    border-radius: 100px;
+    white-space: nowrap;
+}
