@@ -20,8 +20,9 @@ body {
     scroll-behavior: smooth;
 }
 
+/* After 50px of scrolling, show the button. */
 .top {
-    /* setez valoare fixă de decalaj față de partea de sus a paginii */
+    /* variabila globala - setez valoare fixa de decalaj fata de partea de sus a paginii */
     --offset: 50px;
 
     /* ramane fixat la o pozitie data cand este derulat pana la acea pozitie  */
@@ -33,7 +34,7 @@ body {
 
     /* calculeaza o margine superioara care incepe dupa inaltimea vizibila a paginii (100vh)
        si adauga decalajul definit de variabila --offset
-       asigura ca butonul apare doar când se derulează o anumită parte a paginii */
+       asigura ca butonul apare doar când se derulează o anumita parte a paginii */
     margin-top: calc(100vh + var(--offset));
 
     text-decoration: none;
